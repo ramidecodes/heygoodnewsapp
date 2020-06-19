@@ -73,6 +73,9 @@ form {
   .failure {
     color: _palette(negative, bg);
   }
+  .success {
+    color: _palette(positive, bg);
+  }
 }
 label {
   color: _palette(fg-bold);

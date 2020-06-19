@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import createSubscriber from '../utils/subscriber-create';
 
 function Checkbox({ id, name, className }) {
   return (
@@ -23,9 +24,11 @@ function Checkbox({ id, name, className }) {
 }
 
 const EmailForm = () => {
-  // const [isSubmitting, setSubmitting] = useState(false);
+  const [isSuccessfullySaved, setSuccessfullySaved] = useState(false);
+  const [isSaveFailed, setSaveFailed] = useState(false);
+
   return (
-    <section class={'signup-section'}>
+    <section className={'signup-section'}>
       <p>{'Sign up and be the first to know when we go live!'}</p>
 
       <Formik
@@ -47,16 +50,29 @@ const EmailForm = () => {
           }
           return errors;
         }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
+        onSubmit={async (values, { setSubmitting }) => {
+          // Clear preview state
+          setSuccessfullySaved(false);
+          setSaveFailed(false);
+          const subscriber = {
+            email: values.email,
+            firstName: values.firstName,
+            createdAt: new Date().toISOString(),
+            origin: 'prelaunch-form',
+          };
+          try {
+            await createSubscriber(subscriber);
+            setSuccessfullySaved(true);
+          } catch (error) {
+            setSaveFailed(true);
+          } finally {
             setSubmitting(false);
-          }, 400);
+          }
         }}
       >
         {({ isSubmitting, errors, status, touched }) => (
           <Form id="signup-form">
-            <div class="form-fields">
+            <div className="form-fields">
               <Field
                 id="name"
                 type="text"
@@ -68,17 +84,8 @@ const EmailForm = () => {
                 Sign Up
               </button>
             </div>
-            <p class="terms-section">
-              <Checkbox
-                id="acceptTerms"
-                name="acceptTerms"
-                // className={
-                //   'form-check-input ' +
-                //   (errors.acceptTerms && touched.acceptTerms
-                //     ? ' is-invalid'
-                //     : '')
-                // }
-              />
+            <p className="terms-section">
+              <Checkbox id="acceptTerms" name="acceptTerms" />
               <label htmlFor="acceptTerms" className="form-check-label">
                 I aggree with the{' '}
                 <a href="/terms-of-services" target="_blank">
@@ -100,45 +107,24 @@ const EmailForm = () => {
           </Form>
         )}
       </Formik>
+      {isSuccessfullySaved && (
+        <>
+          <p className="success">
+            Thanks! You'll recieve an email when the platform goes live!
+          </p>
+          <p className="success">
+            Follow us on your favourite channels to stay updated with the
+            project.
+          </p>
+        </>
+      )}
+      {isSaveFailed && (
+        <p className="failure">
+          Something went wrong. Please try again later or contact us.
+        </p>
+      )}
     </section>
   );
 };
 
 export default EmailForm;
-// onSubmit(e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-//   this.setState({
-//     message: "You'll be the first to know when we go live!",
-//   });
-//   setTimeout(() => {
-//     this.setState({ message: '' });
-//   }, 3000);
-// }
-// render() {
-//   const { message } = this.state;
-//   return (
-//     <section class={'signup-section'}>
-//       <p>{'Sign up and be the first to know when we go live!'}</p>
-//       <form
-//         id="signup-form"
-//         onSubmit={this.onSubmit}
-//         method="post"
-//         action="#"
-//       >
-//         <input type="text" name="name" id="name" placeholder="First Name" />
-//         <input
-//           type="email"
-//           name="email"
-//           id="email"
-//           placeholder="Email Address"
-//         />
-//         <input type="submit" value="Sign Up" />
-//       </form>
-//       <p>I aggre with the <a href="/terms-of-services">Terms of Services</a></p>
-//       <span className={`${message ? 'visible success' : ''} message`}>
-//         {message}
-//       </span>
-//     </section>
-//   );
-// }

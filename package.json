@@ -11,6 +11,8 @@
     "email": "info@heygood.news"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "faunadb": "^2.14.2",
     "formik": "^2.1.4",
     "gatsby": "^2.20.2",
     "gatsby-plugin-manifest": "^2.3.1",

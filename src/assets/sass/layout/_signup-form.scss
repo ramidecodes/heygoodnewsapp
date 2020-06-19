@@ -44,6 +44,12 @@
       }
     }
   }
+  p.failure {
+    color: _palette(negative, bg);
+  }
+  p.success {
+    color: _palette(positive, bg);
+  }
   .message {
     margin-left: 0;
     //   bottom: -1.5em;
