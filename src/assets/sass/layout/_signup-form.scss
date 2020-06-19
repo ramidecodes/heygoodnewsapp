@@ -19,20 +19,24 @@
       width: 18em;
     }
 
-    > * {
-      margin: 0 0 0 1em;
-    }
+    // > * {
+    //   margin: 0 0 0 1em;
+    // }
 
     > :first-child {
       margin: 0 0 0 0;
     }
-
+    .terms-section {
+      margin-top: 0.5em;
+    }
     @include breakpoint('<=small') {
       @include vendor('flex-direction', 'column');
 
       input[type='text'],
-      input[type='email'] {
+      input[type='email'],
+      button {
         width: 100%;
+        margin-bottom: 1em;
       }
 
       > * {
