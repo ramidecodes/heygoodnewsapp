@@ -26,6 +26,11 @@ module.exports = {
       url: 'https://github.com/ecovirtual/heygoodnewsapp',
     },
     {
+      icon: 'fa-instagram',
+      name: 'Instagram',
+      url: 'https://www.instagram.com/heygoodnewsapp/',
+    },
+    {
       icon: 'fa-envelope-o',
       name: 'Email',
       url: 'mailto:info@heygood.news',
