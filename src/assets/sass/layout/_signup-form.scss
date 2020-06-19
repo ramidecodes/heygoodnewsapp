@@ -1,0 +1,53 @@
+///
+/// Eventually by HTML5 UP
+/// html5up.net | @ajlkn
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Signup Form */
+.signup-section {
+  margin-bottom: 4em;
+  p {
+    margin-bottom: 1em;
+  }
+  #signup-form {
+    @include vendor('display', 'flex');
+    position: relative;
+
+    input[type='text'],
+    input[type='email'] {
+      width: 18em;
+    }
+
+    > * {
+      margin: 0 0 0 1em;
+    }
+
+    > :first-child {
+      margin: 0 0 0 0;
+    }
+
+    @include breakpoint('<=small') {
+      @include vendor('flex-direction', 'column');
+
+      input[type='text'],
+      input[type='email'] {
+        width: 100%;
+      }
+
+      > * {
+        margin: 1.25em 0 0 0;
+      }
+    }
+  }
+  .message {
+    margin-left: 0;
+    //   bottom: -1.5em;
+    //   font-size: 0.9em;
+    //   height: 1em;
+    //   left: 0;
+    //   line-height: inherit;
+    //   margin-top: 0;
+    //   position: absolute;
+  }
+}
