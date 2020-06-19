@@ -87,7 +87,7 @@ const EmailForm = () => {
             <p className="terms-section">
               <Checkbox id="acceptTerms" name="acceptTerms" />
               <label htmlFor="acceptTerms" className="form-check-label">
-                I aggree with the{' '}
+                I agree with the{' '}
                 <a href="/terms-of-services" target="_blank">
                   Terms & Conditions
                 </a>
