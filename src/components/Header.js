@@ -1,8 +1,7 @@
 import React from 'react';
-import config from '../../config';
 import hgnLogo from '../assets/img/HGN_Logo.png';
 
-export default function Footer() {
+export default function Header() {
   return (
     <header id="header">
       <img height="200" src={hgnLogo} alt="Hey Good News" />

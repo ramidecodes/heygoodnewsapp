@@ -8,9 +8,9 @@ export default function Footer() {
         {config.socialLinks.map(social => {
           const { icon, name, url } = social;
           return (
-            <li>
-              <a href={url} class={`icon ${icon}`} target="_blank">
-                <span class="label">{name}</span>
+            <li key={name}>
+              <a href={url} className={`icon ${icon}`} target="_blank">
+                <span className="label">{name}</span>
               </a>
             </li>
           );
