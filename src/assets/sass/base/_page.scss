@@ -55,7 +55,7 @@ body,
   @include vendor('justify-content', 'center');
   background-color: _palette(bg);
   padding: 4em 4em 4em 4em;
-
+  height: auto;
   // Stops initial animations until page loads.
   &.is-preload {
     *,
