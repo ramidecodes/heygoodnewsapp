@@ -2,9 +2,9 @@
 const faunadb = require('faunadb');
 const q = faunadb.query;
 /* configure faunaDB Client with our secret */
-console.log(process.env.FAUNADB_SERVER_SECRET);
+// console.log(process.env.GATSBY_FAUNADB_SERVER_SECRET);
 const client = new faunadb.Client({
-  secret: process.env.FAUNADB_SERVER_SECRET,
+  secret: process.env.GATSBY_FAUNADB_SERVER_SECRET,
 });
 
 const createSubscriber = subscriber => {
