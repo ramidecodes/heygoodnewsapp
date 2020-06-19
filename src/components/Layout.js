@@ -38,8 +38,15 @@ class Layout extends Component {
             <Helmet
               title={data.site.siteMetadata.title}
               meta={[
-                { name: 'description', content: 'Eventually' },
-                { name: 'keywords', content: 'site, web' },
+                {
+                  name: 'description',
+                  content:
+                    'A news aggregator that uses machine learning to filter positive and inspiring content.',
+                },
+                {
+                  name: 'keywords',
+                  content: 'news, aggregator, good news, machine learning, nlp',
+                },
               ]}
             >
               <html lang="en" />
