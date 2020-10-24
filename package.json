@@ -21,7 +21,10 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "max-len": [2, {"code": 100, "ignoreUrls": true}]
+    }
   },
   "browserslist": {
     "production": [
