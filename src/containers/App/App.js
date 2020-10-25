@@ -1,27 +1,16 @@
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from '../../pages/homepage';
 import About from '../../pages/about';
 import Profile from '../../pages/profile';
 import Contact from '../../pages/contact';
+import Topbar from '../../components/Topbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/profile">Profile</Link>
-            </li>
-          </ul>
-        </nav>
+        <Topbar />
 
         <Switch>
           <Route path="/about">
