@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './containers/App';
-import './index.css';
+import './styles/global.css';
 import { ThemeProvider } from 'emotion-theming';
 import reportWebVitals from './reportWebVitals';
 import theme from './styles/theme';
