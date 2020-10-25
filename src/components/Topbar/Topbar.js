@@ -1,9 +1,10 @@
 import { NavLink } from 'react-router-dom';
 import { ReactComponent as HGNLogo } from '../../assets/images/hgn_logo.svg';
+import TopbarStyles from './TopbarStyles';
 const Topbar = () => {
   return (
-    <section className="top-bar">
-      <HGNLogo height="60px" width="auto" />
+    <TopbarStyles className="top-bar">
+      <HGNLogo height="60px" width="70px" />
       <nav>
         <ul>
           <li>
@@ -17,7 +18,7 @@ const Topbar = () => {
           </li>
         </ul>
       </nav>
-    </section>
+    </TopbarStyles>
   );
 };
 
