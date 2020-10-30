@@ -4,27 +4,29 @@ import About from '../../pages/about';
 import Profile from '../../pages/profile';
 import Contact from '../../pages/contact';
 import Topbar from '../../components/Topbar';
-import './App.css';
+import Container from '../../components/Container/Container';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Topbar />
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/profile">
-            <Profile />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route exact path="/">
-            <Homepage />
-          </Route>
-        </Switch>
+        <Container>
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/profile">
+              <Profile />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </Container>
       </div>
     </Router>
   );

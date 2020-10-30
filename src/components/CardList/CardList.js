@@ -1,0 +1,25 @@
+import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
+import Card from '../Card';
+
+const CardListStyles = styled.ul`
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+`;
+
+const CardList = ({ cards }) => {
+  const cardList = cards.map((card) => (
+    <li>
+      <Card cardData={card} />
+    </li>
+  ));
+  return <CardListStyles>{cardList}</CardListStyles>;
+};
+
+CardList.propTypes = {
+  cards: PropTypes.arrayOf(PropTypes.object),
+};
+
+export default CardList;
