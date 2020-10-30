@@ -19,6 +19,9 @@ const TopbarStyles = styled.section`
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
+        &.active {
+          color: ${(props) => props.theme.color.black};
+        }
       }
     }
   }

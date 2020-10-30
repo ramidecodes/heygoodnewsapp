@@ -4,12 +4,11 @@ import TopbarStyles from './TopbarStyles';
 const Topbar = () => {
   return (
     <TopbarStyles className="top-bar">
-      <HGNLogo height="60px" width="70px" />
+      <NavLink to="/">
+        <HGNLogo height="60px" width="70px" />
+      </NavLink>
       <nav>
         <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
