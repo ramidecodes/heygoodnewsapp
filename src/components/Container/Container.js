@@ -6,7 +6,6 @@ const ContainerStyles = styled.main`
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
-  box-sizing: border-box;
 `;
 
 const Container = ({ children }) => {
