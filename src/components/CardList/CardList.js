@@ -7,6 +7,8 @@ const CardListStyles = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  padding: 0;
+  margin: 0;
 `;
 
 const CardList = ({ cards }) => {

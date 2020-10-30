@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+
 // color: ${(theme) => theme.color.black};
 const CardStyles = styled.a`
   text-decoration: none;
@@ -7,7 +8,7 @@ const CardStyles = styled.a`
     border-radius: 15px;
     max-width: 320px;
     padding: 1rem;
-    /* margin: 1rem; */
+    margin-bottom: 2rem;
   }
 `;
 
