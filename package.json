@@ -52,5 +52,5 @@
   },
   "devDependencies": {
     "source-map-explorer": "^2.5.0"
-  },
+  }
 }
