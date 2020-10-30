@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 
 const ContainerStyles = styled.main`
-  padding: 1rem 2rem;
+  padding: 2rem;
   width: 100%;
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
+  box-sizing: border-box;
 `;
 
 const Container = ({ children }) => {
