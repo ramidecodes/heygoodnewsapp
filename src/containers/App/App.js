@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
 import Homepage from '../../pages/homepage';
 import About from '../../pages/about';
 import Profile from '../../pages/profile';
 import Contact from '../../pages/contact';
 import Topbar from '../../components/Topbar';
+import './App.css';
 
 function App() {
   return (
