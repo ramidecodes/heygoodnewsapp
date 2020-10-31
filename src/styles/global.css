@@ -22,3 +22,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #20d188;
+}
+
+h1 {
+  font-size: 1.5rem;;
+}
+p {
+  font-size: .95rem;
+}

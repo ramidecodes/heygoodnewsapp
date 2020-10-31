@@ -2,9 +2,19 @@ import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 const TagStyles = styled.a`
-  color: ${(theme) => theme.color.black};
+  color: ${({ theme }) => theme.color.black};
+  margin-bottom: 1rem;
+  &:hover {
+    color: ${({ theme }) => theme.color.black};
+  }
   span {
-    background-color: ${(theme) => theme.color.gray};
+    padding: 0.3rem 0.8rem;
+    margin-right: 0.5rem;
+    background-color: ${({ theme }) => theme.color.gray};
+    border-radius: ${({ theme }) => theme.standardRadious};
+    &:hover {
+      background-color: ${({ theme }) => theme.color.mainGreen};
+    }
   }
 `;
 

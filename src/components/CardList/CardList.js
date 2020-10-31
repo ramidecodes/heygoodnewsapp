@@ -9,6 +9,12 @@ const CardListStyles = styled.ul`
   justify-content: space-between;
   padding: 0;
   margin: 0;
+  li {
+    width: 340px;
+    &:first-of-type {
+      width: 100%;
+    }
+  }
 `;
 
 const CardList = ({ cards }) => {
