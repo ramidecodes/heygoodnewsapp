@@ -6,6 +6,10 @@ const theme = {
     gray: '#ddd',
     darkGray: '#9a9a9a',
   },
+  padding: {
+    standard: '2rem',
+    large: '3rem',
+  },
   standardRadious: '15px',
   standardShadow: '0px 2px 6px #bbb',
   raisedShadow: '0px 6px 12px #bfbfbf',
