@@ -5,7 +5,7 @@ const Topbar = () => {
   return (
     <TopbarStyles className="top-bar">
       <NavLink to="/">
-        <HGNLogo height="60px" width="70px" />
+        <HGNLogo className="logo" height="60px" width="70px" />
       </NavLink>
       <nav>
         <ul>

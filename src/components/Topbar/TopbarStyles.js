@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
 
-const TopbarStyles = styled.section`
+const TopbarStyles = styled.header`
   background-color: ${(props) => props.theme.color.mainGreen};
   height: 4rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   nav ul {
     display: flex;
@@ -19,7 +20,8 @@ const TopbarStyles = styled.section`
         text-decoration: none;
         text-transform: uppercase;
         font-weight: bold;
-        &.active {
+        &.active,
+        &:hover {
           color: ${(props) => props.theme.color.black};
         }
       }

@@ -9,6 +9,12 @@ const theme = {
   standardRadious: '15px',
   standardShadow: '0px 2px 6px #bbb',
   raisedShadow: '0px 6px 12px #bfbfbf',
+  media: {
+    xl: 'screen and (max-width: 1199px)',
+    lg: 'screen and (max-width: 991px)',
+    md: 'screen and (max-width: 767px)',
+    sm: 'screen and (max-width: 575px)',
+  },
 };
 
 export default theme;

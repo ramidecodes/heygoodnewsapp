@@ -10,8 +10,12 @@ const CardListStyles = styled.ul`
   padding: 0;
   margin: 0;
   li {
+    transition: width 0.4s ease;
     width: 340px;
     &:first-of-type {
+      width: 100%;
+    }
+    @media ${({ theme }) => theme.media.md} {
       width: 100%;
     }
   }
@@ -19,7 +23,7 @@ const CardListStyles = styled.ul`
 
 const CardList = ({ cards }) => {
   const cardList = cards.map((card) => (
-    <li>
+    <li key={card.id}>
       <Card cardData={card} />
     </li>
   ));

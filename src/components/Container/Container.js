@@ -6,6 +6,9 @@ const ContainerStyles = styled.main`
   height: 100%;
   display: flex;
   flex-flow: column nowrap;
+  @media ${({ theme }) => theme.media.md} {
+    justify-content: center;
+  }
 `;
 
 const Container = ({ children }) => {

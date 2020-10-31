@@ -6,7 +6,9 @@ import CardStyles from './CardStyles';
 
 const Card = ({ cardData }) => {
   const categoryList = cardData.categories.map((category) => (
-    <Tag link={`/categories/${category}`}>{category}</Tag>
+    <Tag link={`/categories/${category}`} key={category}>
+      {category}
+    </Tag>
   ));
   const baseDomain = getBaseDomain(cardData.link);
   const originLink = `https://${baseDomain}/`;
