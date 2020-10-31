@@ -25,6 +25,12 @@ const CardStyles = styled.article`
   .subheader {
     margin: 0;
     color: ${({ theme }) => theme.color.darkGray};
+    a {
+      color: ${({ theme }) => theme.color.darkGray};
+      &:hover {
+        color: ${({ theme }) => theme.color.mainGreen};
+      }
+    }
   }
   footer {
     display: flex;

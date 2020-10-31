@@ -8,6 +8,8 @@ const Card = ({ cardData }) => {
   const categoryList = cardData.categories.map((category) => (
     <Tag link={`/categories/${category}`}>{category}</Tag>
   ));
+  const baseDomain = getBaseDomain(cardData.link);
+  const originLink = `https://${baseDomain}/`;
   return (
     <CardStyles>
       <h1>
@@ -18,7 +20,9 @@ const Card = ({ cardData }) => {
       <p className="subheader">
         <span className="date">{cardData.date}</span>
         {' | '}
-        {getBaseDomain(cardData.link)}
+        <a href={originLink} target="_blank" rel="noreferrer">
+          {baseDomain}
+        </a>
       </p>
       <p>{cardData.description}</p>
       <footer>
