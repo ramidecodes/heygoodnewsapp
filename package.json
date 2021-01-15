@@ -1,10 +1,10 @@
 {
   "name": "heygoodnewsapp",
   "version": "1.0.0",
-  "description": "News aggregator that filters positive and inspiring pieces and delivers then as a weekly newsletter.",
+  "description": "News aggregator that filters positive and inspiring pieces and delivers them as a weekly newsletter.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-eventually.git"
+    "url": "git+https://github.com/ecovirtual/heygoodnewsapp.git"
   },
   "author": {
     "name": "Ramiro Ramirez",
