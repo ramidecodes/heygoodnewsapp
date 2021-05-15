@@ -1,50 +1,57 @@
 {
   "name": "heygoodnewsapp",
-  "version": "1.0.0",
-  "description": "News aggregator that filters positive and inspiring pieces and delivers then as a weekly newsletter.",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anubhavsrivastava/gatsby-starter-eventually.git"
-  },
-  "author": {
-    "name": "Ramiro Ramirez",
-    "email": "info@heygood.news"
-  },
+  "version": "0.1.0",
+  "private": true,
+  "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
-    "faunadb": "^2.14.2",
-    "formik": "^2.1.4",
-    "gatsby": "2.21.40",
-    "gatsby-plugin-google-analytics": "^2.3.4",
-    "gatsby-plugin-manifest": "^2.4.12",
-    "gatsby-plugin-offline": "^3.2.11",
-    "gatsby-plugin-react-helmet": "^3.3.4",
-    "gatsby-plugin-sass": "^2.3.4",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "emotion-theming": "^10.0.27",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet-async": "^1.0.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.0",
+    "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "develop": "gatsby develop -S",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "rimraf .cache public",
-    "format": "prettier --write '**/*.js'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
+    "start": "HTTPS=true react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "rules": {
+      "max-len": [
+        2,
+        {
+          "code": 100,
+          "ignoreUrls": true
+        }
+      ]
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
-    "prettier": "^1.17.0",
-    "rimraf": "^3.0.2"
-  },
-  "keywords": [
-    "gatsby",
-    "heygoodnews",
-    "news aggregator"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ecovirtual/heygoodnewsapp/issues"
-  },
-  "homepage": "https://github.com/ecovirtual/heygoodnewsapp#readme"
+    "source-map-explorer": "^2.5.0"
+  }
 }
