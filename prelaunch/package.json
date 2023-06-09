@@ -14,7 +14,7 @@
     "dotenv": "^8.2.0",
     "faunadb": "^2.14.2",
     "formik": "^2.1.4",
-    "gatsby": "2.21.40",
+    "gatsby": "4.25.7",
     "gatsby-plugin-google-analytics": "^2.3.4",
     "gatsby-plugin-manifest": "^2.4.12",
     "gatsby-plugin-offline": "^3.2.11",
